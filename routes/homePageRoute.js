@@ -14,12 +14,12 @@ module.exports = {
         { email: 'test2@email.com', password: '123' },
       ];
 
-      const { email, password } = req.body;
-      const user = users.find(u => u.email === email && u.password === password);
+      const { email, password } = req.body;                                     //req.body is the data sent from the client side
+      const user = users.find(u => u.email === email && u.password === password); //find the user in the array of users
 
-      if (user) {
+      if (user) {                                 //if the user is found
         res.json({ valid: true });
-      } else {
+      } else {                                  //if the user is not found
         res.json({ valid: false });
       }
     });

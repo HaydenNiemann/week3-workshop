@@ -18,10 +18,10 @@ $(document).ready(function() {
             success: function(response) {
                 if (response.valid) {
                     
-                    $("#loginForm").css("background-color", "green");
-                    $("#errormsg").hide(); 
+                    $("#loginForm").css("background-color", "green");   //change the background color of the form to green
+                    $("#errormsg").hide();                              
                 } else {
-                    $("#loginForm").css("background-color", "red");
+                    $("#loginForm").css("background-color", "red");     //change the background color of the form to red
                     $("#errormsg").show(); 
                 }
             },
